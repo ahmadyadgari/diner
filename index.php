@@ -14,7 +14,7 @@ require_once ('vendor/autoload.php');
 $f3 = Base::instance();
 
 // Define a default route
-// https://ayadgari.greenriverdev.com/328/Week2/diner/index.php
+// https://ayadgari.greenriverdev.com/328/Week2/diner/
 
 $f3->route('GET /', function() {
     //echo '<h1>Hello Diner!</h1>';
