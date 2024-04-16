@@ -13,7 +13,7 @@ require_once ('vendor/autoload.php');
 // Instantiate the F3 Base class
 $f3 = Base::instance();
 
-// Define a default route
+// Define a default route to home page
 // https://ayadgari.greenriverdev.com/328/Week2/diner/
 
 $f3->route('GET /', function() {
@@ -21,7 +21,34 @@ $f3->route('GET /', function() {
 
     // Render a view page
     $view = new Template();
-    echo $view->render('views/');
+    echo $view->render('views/home-page.html');
+});
+
+// define 2nd Route to breakfast menu
+$f3->route('GET /menus/breakfast', function() {
+    // echo '<h1>Welcome, This is Menu!</h1>';
+
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/breakfast-menu.html');
+});
+
+// define 3rd Route to Lunch menu
+$f3->route('GET /menus/lunch', function() {
+    // echo '<h1>Welcome, This is Menu!</h1>';
+
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/lunch-menu.html');
+});
+
+// define 4th Route to dinner menu
+$f3->route('GET /menus/dinner', function() {
+    // echo '<h1>Welcome, This is Menu!</h1>';
+
+    // Render a view page
+    $view = new Template();
+    echo $view->render('views/dinner-menu.html');
 });
 
 // Run Fat-Free
